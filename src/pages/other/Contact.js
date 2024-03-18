@@ -22,6 +22,23 @@ const Contact = () => {
             {label: "Contact", path: process.env.PUBLIC_URL + pathname }
           ]} 
         />
+
+          {/* <div className="contact-area pt-100 pb-100">
+            <div className="container">
+              <div className="custom-row-2">
+                <div className="col-12 col-lg-4 col-md-5">
+                    <p>212-371-8500</p>
+                </div>
+                <div className="col-12 col-lg-4 col-md-5">
+                    <p>212-371-8500</p>
+                </div>
+                <div className="col-12 col-lg-4 col-md-5">
+                    <p>212-371-8500</p>
+                </div>
+              </div>
+            </div>
+          </div> */}
+
         <div className="contact-area pt-100 pb-100">
           <div className="container">
             <div className="contact-map mb-10">
@@ -35,8 +52,8 @@ const Contact = () => {
                       <i className="fa fa-phone" />
                     </div>
                     <div className="contact-info-dec">
-                      <p>+012 345 678 102</p>
-                      <p>+012 345 678 102</p>
+                      <p>212-371-8500</p>
+                      <p>212-371-8555</p>
                     </div>
                   </div>
                   <div className="single-contact-info">
@@ -45,15 +62,11 @@ const Contact = () => {
                     </div>
                     <div className="contact-info-dec">
                       <p>
-                        <a href="mailto:yourname@email.com">
-                          yourname@email.com
+                        <a href="mailto:newyork@luchiana.com">
+                          newyork@luchiana.com
                         </a>
                       </p>
-                      <p>
-                        <a href="https://yourwebsitename.com">
-                          yourwebsitename.com
-                        </a>
-                      </p>
+                      
                     </div>
                   </div>
                   <div className="single-contact-info">
@@ -61,8 +74,8 @@ const Contact = () => {
                       <i className="fa fa-map-marker" />
                     </div>
                     <div className="contact-info-dec">
-                      <p>Address goes here, </p>
-                      <p>street, Crossroad 123.</p>
+                      <p>9 East 40th Street, </p>
+                      <p>3rd Floor, New York City.</p>
                     </div>
                   </div>
                   <div className="contact-social text-center">
