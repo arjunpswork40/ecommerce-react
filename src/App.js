@@ -104,6 +104,8 @@ const Checkout = lazy(() => import("./pages/other/Checkout"));
 
 const NotFound = lazy(() => import("./pages/other/NotFound"));
 
+const FAQ = lazy(() => import("./pages/other/FAQ"))
+
 const App = () => {
   return (
       <Router>
@@ -393,6 +395,10 @@ const App = () => {
               <Route
                 path={process.env.PUBLIC_URL + "/checkout"}
                 element={<Checkout/>}
+              /> 
+              <Route
+                path={process.env.PUBLIC_URL + "/FAQ"}
+                element={<FAQ/>}
               /> 
 
               <Route path="*" element={<NotFound/>} />
