@@ -103,6 +103,7 @@ const Compare = lazy(() => import("./pages/other/Compare"));
 const Checkout = lazy(() => import("./pages/other/Checkout"));
 
 const NotFound = lazy(() => import("./pages/other/NotFound"));
+const TermsAndConditions = lazy(() => import("./pages/other/TermsAndConditions"))
 
 const App = () => {
   return (
@@ -393,6 +394,10 @@ const App = () => {
               <Route
                 path={process.env.PUBLIC_URL + "/checkout"}
                 element={<Checkout/>}
+              /> 
+               <Route
+                path={process.env.PUBLIC_URL + "/termsandconditions"}
+                element={<TermsAndConditions/>}
               /> 
 
               <Route path="*" element={<NotFound/>} />
