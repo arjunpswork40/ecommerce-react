@@ -24,14 +24,14 @@ const PrivacyPolicy = () => {
           ]} 
         />
         <div>
-    <h2 class="text-center fw-semibold">PRIVACY NOTICE</h2>
+    <h2 class="text-center fw-semibold">PRIVACY NOTICE </h2>
     <p class="text-center lh-base">
     This privacy notice for Alweena Perfumes LLC (doing business as Alweena Perfumes) (“Alweena Perfumes,” “we,” “us,” or “our“), describes how and why we might collect, store, use, and/or share (“process“) your information when you use our services (“Services“), such as when you:
     </p>
     <p>
       We only ask for personal information when we truly need it to provide a
       service to you. We collect it by fair and lawful means, with your
-      knowledge and consent. We also let you know why we’re collecting it and
+      knowledge and consent. We also let you know why we're collecting it and
       how it will be used.
     </p>
     <p>
