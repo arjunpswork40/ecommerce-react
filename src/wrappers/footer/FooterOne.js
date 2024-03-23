@@ -81,9 +81,9 @@ const FooterOne = ({
                   <li>
                     <Link to={process.env.PUBLIC_URL + "/privacy-policy"}>Privacy Policy</Link>
                   </li>
-                  <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>
-                      Support Policy
+                  <li style={{width:'180px'}}>
+                    <Link to={process.env.PUBLIC_URL + "/terms-and-conditions"}>
+                      Terms and Conditions
                     </Link>
                   </li>
                   <li>
