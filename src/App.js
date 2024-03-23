@@ -107,6 +107,9 @@ const TermsAndConditions = lazy(() => import("./pages/other/TermsAndConditions")
 const PrivacyPolicy = lazy(() => import("./pages/other/PrivacyPolicy"))
 
 
+const FAQ = lazy(() => import("./pages/other/FAQ"))
+const PrivacyPolicy = lazy(() => import('./pages/other/PrivacyPolicy'))
+
 const App = () => {
   return (
       <Router>
@@ -400,6 +403,14 @@ const App = () => {
                <Route
                 path={process.env.PUBLIC_URL + "/termsandconditions"}
                 element={<TermsAndConditions/>}
+              />
+              <Route
+                path={process.env.PUBLIC_URL + "/FAQ"}
+                element={<FAQ/>}
+              />
+              <Route
+                path={process.env.PUBLIC_URL + "/privacy-policy"}
+                element={<PrivacyPolicy/>}
               /> 
                <Route
                 path={process.env.PUBLIC_URL + "/privacypolicy"}
