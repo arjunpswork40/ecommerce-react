@@ -26,8 +26,7 @@ const FooterOne = ({
           >
             {/* footer copyright */}
             <FooterCopyright
-              footerLogo="/assets/img/logo/logo.png"
-              
+              footerLogo="/assets/img/logo/Alweenalogo.png"
               spaceBottomClass="mb-30"
             />
           </div>
@@ -56,9 +55,7 @@ const FooterOne = ({
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>
-                      Orders tracking
-                    </Link>
+                    <Link to={process.env.PUBLIC_URL + "/FAQ"}>FAQs</Link>
                   </li>
                 </ul>
               </div>
@@ -82,7 +79,7 @@ const FooterOne = ({
               <div className="footer-list">
                 <ul>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>Returns</Link>
+                    <Link to={process.env.PUBLIC_URL + "/privacy-policy"}>Privacy Policy</Link>
                   </li>
                   <li>
                     <Link to={process.env.PUBLIC_URL + "#/"}>
@@ -92,9 +89,7 @@ const FooterOne = ({
                   <li>
                     <Link to={process.env.PUBLIC_URL + "#/"}>Size guide</Link>
                   </li>
-                  <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>FAQs</Link>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
