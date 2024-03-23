@@ -399,7 +399,7 @@ const App = () => {
                 element={<Checkout/>}
               /> 
                <Route
-                path={process.env.PUBLIC_URL + "/termsandconditions"}
+                path={process.env.PUBLIC_URL + "/terms-and-conditions"}
                 element={<TermsAndConditions/>}
               />
               <Route
