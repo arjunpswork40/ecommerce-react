@@ -57,8 +57,8 @@ const FooterFour = ({
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>
-                      Orders tracking
+                    <Link to={process.env.PUBLIC_URL + "/privacypolicy"}>
+                      Privacy Policy
                     </Link>
                   </li>
                 </ul>

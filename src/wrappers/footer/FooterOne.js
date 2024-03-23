@@ -46,8 +46,8 @@ const FooterOne = ({
                     <Link to={process.env.PUBLIC_URL + "/about"}>About us</Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>
-                      Store location
+                    <Link to={process.env.PUBLIC_URL + "/termsandconditions"}>
+                      Terms & Conditions
                     </Link>
                   </li>
                   <li>
@@ -56,8 +56,8 @@ const FooterOne = ({
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>
-                      Orders tracking
+                    <Link to={process.env.PUBLIC_URL + "/privacypolicy"}>
+                      Privacy Policy
                     </Link>
                   </li>
                 </ul>

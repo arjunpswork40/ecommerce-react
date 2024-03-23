@@ -104,6 +104,8 @@ const Checkout = lazy(() => import("./pages/other/Checkout"));
 
 const NotFound = lazy(() => import("./pages/other/NotFound"));
 const TermsAndConditions = lazy(() => import("./pages/other/TermsAndConditions"))
+const PrivacyPolicy = lazy(() => import("./pages/other/PrivacyPolicy"))
+
 
 const App = () => {
   return (
@@ -398,6 +400,10 @@ const App = () => {
                <Route
                 path={process.env.PUBLIC_URL + "/termsandconditions"}
                 element={<TermsAndConditions/>}
+              /> 
+               <Route
+                path={process.env.PUBLIC_URL + "/privacypolicy"}
+                element={<PrivacyPolicy/>}
               /> 
 
               <Route path="*" element={<NotFound/>} />
