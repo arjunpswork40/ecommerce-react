@@ -26,8 +26,8 @@ const HomeOnepageScroll = () => {
   return (
     <Fragment>
       <SEO
-        titleTemplate="Fashion Home"
-        description="Fashion home of flone react minimalist eCommerce template."
+        titleTemplate="Home"
+        description="Home page for Alweena."
       />
       <div className="fullpage-slider-wrapper">
         <Header>
