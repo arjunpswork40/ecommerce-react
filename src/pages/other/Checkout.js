@@ -5,6 +5,7 @@ import { getDiscountPrice } from "../../helpers/product";
 import SEO from "../../components/seo";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
+import {loadStripe} from '@stripe/stripe-js';
 
 const Checkout = () => {
   let cartTotalPrice = 0;
@@ -12,6 +13,34 @@ const Checkout = () => {
   let { pathname } = useLocation();
   const currency = useSelector((state) => state.currency);
   const { cartItems } = useSelector((state) => state.cart);
+  const makePayment = async () => {
+    console.log(process.env.REACT_APP_STRIPE_PUBLIC_KEY,process.env.REACT_APP_API_BASE_URL)
+    const stripe = await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+
+    const body = {
+      products: cartItems
+    }
+
+    const headers={
+      "Content-Type" : "application/json"
+    }
+
+    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/user/payment/create-checkout-session`,{
+      method:"POST",
+      headers:headers,
+      body:JSON.stringify(body)
+    })
+
+    const session = await response.json();
+
+    const result = stripe.redirectToCheckout({
+      sessionId:session.id
+    })
+
+    if(result.error){
+      console.log(result.error)
+    }
+  }
 
   return (
     <Fragment>
@@ -197,7 +226,7 @@ const Checkout = () => {
                       <div className="payment-method"></div>
                     </div>
                     <div className="place-order mt-25">
-                      <button className="btn-hover">Place Order</button>
+                      <button onClick={makePayment} className="btn-hover">Place Order</button>
                     </div>
                   </div>
                 </div>
