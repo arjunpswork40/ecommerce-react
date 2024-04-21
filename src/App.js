@@ -110,7 +110,7 @@ const PrivacyPolicy = lazy(() => import('./pages/other/PrivacyPolicy'))
 
 const CancelPayment = lazy(() => import("./pages/other/CancelPayment"))
 const SuccessPayment = lazy(() => import("./pages/other/SuccessPayment"))
-
+const OtpVerification = lazy(() => import('./pages/other/OTP'))
 const App = () => {
   return (
       <Router>
@@ -422,6 +422,16 @@ const App = () => {
               <Route
                 path={process.env.PUBLIC_URL + "/payment-success"}
                 element={<SuccessPayment/>}
+              /> 
+
+               <Route
+                path={process.env.PUBLIC_URL + "/payment-success"}
+                element={<SuccessPayment/>}
+              /> 
+
+              <Route
+                path={process.env.PUBLIC_URL + "/otp-verification"}
+                element={<OtpVerification/>}
               /> 
 
               <Route path="*" element={<NotFound/>} />
