@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import clsx from "clsx";
 import MenuCart from "./sub-components/MenuCart";
+import { useTranslation } from "react-i18next";
 
 const IconGroup = ({ iconWhiteClass }) => {
+  const { t } = useTranslation();
+
   const handleClick = e => {
     e.currentTarget.nextSibling.classList.toggle("active");
   };
@@ -44,13 +47,9 @@ const IconGroup = ({ iconWhiteClass }) => {
         <div className="account-dropdown">
           <ul>
             <li>
-              <Link to={process.env.PUBLIC_URL + "/login-register"}>Login</Link>
+              <Link to={process.env.PUBLIC_URL + "/login-register"}>{t("login_register")}</Link>
             </li>
-            <li>
-              <Link to={process.env.PUBLIC_URL + "/login-register"}>
-                Register
-              </Link>
-            </li>
+            
             <li>
               <Link to={process.env.PUBLIC_URL + "/my-account"}>
                 my account

@@ -6,8 +6,8 @@ import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 
 const MyAccount = () => {
-  let { pathname } = useLocation();
-
+  let { pathname, state, token } = useLocation();
+  console.log('token=>',token)
   return (
     <Fragment>
       <SEO
@@ -43,33 +43,28 @@ const MyAccount = () => {
                               <div className="col-lg-6 col-md-6">
                                 <div className="billing-info">
                                   <label>First Name</label>
-                                  <input type="text" />
+                                  <input type="text" defaultValue={state?.data?.first_name} />
                                 </div>
                               </div>
                               <div className="col-lg-6 col-md-6">
                                 <div className="billing-info">
                                   <label>Last Name</label>
-                                  <input type="text" />
+                                  <input type="text" defaultValue={state?.data?.last_name}/>
                                 </div>
                               </div>
                               <div className="col-lg-12 col-md-12">
                                 <div className="billing-info">
                                   <label>Email Address</label>
-                                  <input type="email" />
+                                  <input type="email" defaultValue={state?.data?.email} />
                                 </div>
                               </div>
                               <div className="col-lg-6 col-md-6">
                                 <div className="billing-info">
-                                  <label>Telephone</label>
-                                  <input type="text" />
+                                  <label>Mobile Number</label>
+                                  <input type="text" defaultValue={state?.data?.mobileNumber}/>
                                 </div>
                               </div>
-                              <div className="col-lg-6 col-md-6">
-                                <div className="billing-info">
-                                  <label>Fax</label>
-                                  <input type="text" />
-                                </div>
-                              </div>
+                              
                             </div>
                             <div className="billing-back-btn">
                               <div className="billing-btn">
